@@ -14,6 +14,9 @@ public class Question1Solution {
         System.out.println(solution.sumOfUnique(new int[]{1,1,1,1}));
     }
 
+    // n is the length of nums
+    // Time: O(n)
+    // Space: O(n)
     public int sumOfUnique(int[] nums) {
         int sum = 0;
         if (nums == null || nums.length == 0) {

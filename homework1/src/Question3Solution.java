@@ -16,6 +16,9 @@ public class Question3Solution {
         System.out.println(solution.findFirstNonRepeatedInteger(new int[]{1}));
     }
 
+    // n is the length of nums
+    // Time: O(n)
+    // Space: O(n)
     public int findFirstNonRepeatedInteger(int[] array) {
         Map<Integer, Boolean> repeatedMap = new HashMap<>();
         for (int i : array) {

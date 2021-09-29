@@ -11,6 +11,9 @@ public class Question5Solution {
         System.out.println(solution.validString("A2bb2d4"));
     }
 
+    // n is the length of the input string
+    // Time: O(n)
+    // Space: O(1)
     public boolean validString(String s) {
         if (s == null || s.length() <= 1) {
             return true;

@@ -13,6 +13,9 @@ public class Question2Solution {
         System.out.println(Arrays.toString(solution.sortedSquares(new int[]{16,1,0,9,100})));
     }
 
+    // n is the length of nums
+    // Time: O(n)
+    // Space: O(1)
     public int[] sortedSquares(int[] nums) {
         if (nums == null || nums.length < 1) {
             return nums;

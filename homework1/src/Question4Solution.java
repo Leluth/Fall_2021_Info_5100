@@ -13,20 +13,23 @@ public class Question4Solution {
         System.out.println(solution.canConstruct("aa", "aab"));
     }
 
+    // m is the length of ransomNote, n is the length of magazine
+    // Time: O(m + n)
+    // Space: O(m)
     public boolean canConstruct(String ransomNote, String magazine) {
         if (ransomNote == null || magazine == null || ransomNote.length() > magazine.length()) {
             return false;
         }
         HashMap<Character, Integer> map = new HashMap<>();
         for (int i = 0; i < ransomNote.length(); i++) {
-            char ch = ransomNote.charAt(i);
-            int newF = map.getOrDefault(ch, 0) + 1;
-            map.put(ch, newF);
+            char c = ransomNote.charAt(i);
+            int newF = map.getOrDefault(c, 0) + 1;
+            map.put(c, newF);
         }
         for (int i = 0; i < magazine.length(); i++) {
-            char ch = magazine.charAt(i);
-            if (map.containsKey(ch) && map.get(ch)> 0) {
-                map.put(ch, map.get(ch) - 1);
+            char c = magazine.charAt(i);
+            if (map.containsKey(c) && map.get(c)> 0) {
+                map.put(c, map.get(c) - 1);
             }
         }
         for (int val : map.values()) {
